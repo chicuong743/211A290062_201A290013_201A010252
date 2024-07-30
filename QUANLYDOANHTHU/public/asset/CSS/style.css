@@ -1,0 +1,468 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main--height:50px;
+    --main-color: #424543;
+    --second-color: #71cd74;
+    --text-color: #ffffff;
+    --main--transition:all 0.5s ease;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif ;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+.row-grid{
+    display: grid;
+    justify-content: space-between;
+}
+.flex-box{
+    display: flex;
+}
+/*main admin------------------------------------------------------*/
+.admin .row-grid{
+    grid-template-columns:20% 80% ;
+    height: 100vh;
+}
+.main-btn{
+    background-color:green;
+    padding:5px 10px ;
+    border-radius: 0.5rem;
+}
+.main-btn:hover{
+    background-color: var(--second-color);
+}
+.delete-class{
+    padding:3px ;
+    background-color: red;
+    color:var(--text-color);
+    border-radius:5px ;
+}
+.edit-class{
+    padding:3px ;
+    background-color:rgb(4, 87, 255) ;
+    color:var(--text-color);
+    border-radius:5px ;
+}
+.confrim-order{
+    padding:3px ;
+    background-color:green ;
+    color:var(--text-color);
+    border-radius:5px ;
+}
+.non-confrim-order{
+    padding:3px ;
+    background-color: red;
+    color:var(--text-color);
+    border-radius:5px ;
+}
+/*sidebar---------------------------------------------------------*/
+.admin-sidebar-top img{
+    width:50px;
+    margin-right:10px ;
+
+}
+.admin-sidebar-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid green ;
+    height:var(--main--height);
+}
+.admin-sidebar-top p{
+    color: var(--text-color);
+}
+.admin-sidebar-top img{
+    width:50px
+}
+
+.admin-sidebar{
+    background-color: var(--main-color);
+}
+.admin-sidebar-content{
+    padding:30px 30px 0 30px ;
+    color: var(--text-color);
+}
+.admin-sidebar-content ul li a{
+    padding:5px ;
+}
+.admin-sidebar-content > ul > li > a{
+    justify-content: space-between;
+    width:100% ;
+    display: block;
+    display: flex;
+}
+.admin-sidebar-content ul li a i{
+    margin-right: 6px;
+}
+.admin-sidebar-content > ul > li>a:hover{
+    background-color: #6c6e6d;
+    border-radius: 0.5rem;
+}
+.sub-menu-items li{
+    margin-left:20px ;
+}
+.sub-menu-items li a{
+    font-size: 0.9rem;
+}
+.sub-menu {
+    height: 0;
+    overflow: hidden;
+    transition: var(--main--transition);
+}
+
+.sub-menu li:hover a{
+    color:var(--second-color);
+}
+/*content-----------------------------------------------------------------------*/
+.admin-content-top{
+    display: flex;
+    justify-content: space-between;
+    height:var(--main--height) ;
+    border-bottom: 1px solid green;
+    padding:0 15px 0 15px ;
+}
+.admin-content-top .flex-box{
+    align-items: center;
+    height: var(--main--height);
+}
+.admin-content-top i{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.admin-content-top-right ul li:last-child p{
+    cursor: pointer;
+}
+.admin-content-top-right ul li:first-child i{
+    position: relative;
+}
+.admin-content-top-right ul li:first-child i::after{
+    position: absolute;
+    content: attr(number);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color:rgb(96, 181, 255);
+    border-radius: 50%;
+    top: -12px;
+    right: -10px;
+    color: #ffffff;
+    font-size: smaller;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: thongbao ;
+    animation-duration:1.5s;
+    animation-iteration-count: infinite;
+}
+.admin-content-top-right ul li:nth-child(2) i{
+    position: relative;
+}
+.admin-content-top-right ul li:nth-child(2) i::after{
+    position: absolute;
+    content: attr(number);
+    height: 20px;
+    width: 20px;
+    display: flex;
+    background-color:rgb(253, 31, 31);
+    border-radius: 50%;
+    top: -12px;
+    right: -10px;
+    color: #ffffff;
+    font-size: smaller;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    animation: thongbao ;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+@keyframes thongbao {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.admin-content-main-title h1{
+    padding:15px ;
+    font-weight: 500;
+    position: relative;
+}
+.admin-content-main-title h1::before{
+    position: absolute;
+    display: block;
+    content: "";
+    height:4px ;
+    width: 70px;
+    background-color: green;
+    bottom: 5px;
+    left: 15px;
+    border-bottom-right-radius:10px ;
+    border-top-right-radius:10px;
+}
+.admin-content-main-content{
+    background-color:whitesmoke;
+}
+/*product-add-------------------------------------------------*/
+.admin-content-main-content-product-add{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding:15px;
+    column-gap: 20px;
+}
+
+.admin-content-main-content-left input{
+    height:40px ;
+    border: 1px solid var(--second-color);
+    margin-bottom:20px ;
+    outline: none;
+    border-radius: 5px;
+    padding-left:2%;
+}
+.admin-content-main-content-two-input {
+    display: flex;
+    justify-content: space-between;
+}
+.admin-content-main-content-two-input:first-child input{
+    width: 33%;
+}
+.admin-content-main-content-two-input input{
+    width: 48%;
+}
+.admin-content-main-content-two-input select{
+    width: 35%;
+    margin:0 5px 20px 5px;
+    border: 1px solid var(--second-color);
+    border-radius: 5px;
+}
+.admin-content-main-content-left textarea{
+    height: 200px;
+    width: 100%;
+    margin-bottom: 20px;
+    outline:none ;
+    border: 1px solid var(--second-color);
+}
+.admin-content-main-content-right-image{
+    margin-top:5px ;
+}
+.admin-content-main-content-right-image input{
+    display: none;
+}
+.admin-content-main-content-right-images input{
+    display: none;
+}
+.image-show, .images-show{
+    min-height:150px ;
+}
+#input-file-img .input-file-imgs {
+    margin:15px 5px ;
+}
+#input-file-img img{
+    width:100px ;
+}
+#input-file-imgs img{
+    width: 100px;
+    display: flex;
+    margin:15px 5px ;
+
+}
+.admin-content-main-content-right label{
+    background-color:green;
+    padding:5px 10px ;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+}
+.admin-content-main-content-right label:hover{
+    background-color: var(--second-color);
+}
+/*product-list-------------------------------------------------------*/
+.admin-content-main-content-product-list table{
+    width:100% ;
+    margin:20px 0 ;
+    border-collapse:collapse ;
+}
+
+.admin-content-main-content-product-list table,th,td{
+    text-align: center;
+}
+.admin-content-main-content-product-list table th{
+    background-color: #424543;
+    color: var(--text-color);
+    padding:5px 0 ;
+}
+/*order- create------------------------------------------------------------*/
+.admin-content-main-content-product-add{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding:15px;
+    column-gap: 20px;
+
+}
+
+.left{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height:300px;
+}
+.top_left{
+    font-size: larger;
+    padding:10px 0px ;
+}
+.top_left input{
+    height:30px ;
+    border: 1px solid green;
+    border-radius:5px;
+    margin-right:10px ;
+
+
+}
+.top_left button{
+    width: 100px;
+    height: 30px;
+    background-color: whitesmoke;
+    border:2px solid green;
+    font-weight: bolder;
+}
+.top_left button:hover{
+    background-color: rgb(12, 0, 185);
+    color: aliceblue;
+}
+.between_left{
+    display: flex;
+    padding:20px;
+    justify-content: space-between;
+}
+.between_left table{
+    border-collapse:collapse ;
+    align-items: center;
+    border: 1px solid green;
+}
+.between_left table th {
+    background-color: green;
+}
+.between_left table th,td{
+    width:150px ;
+    padding:5px 10px ;
+    border: 1px solid black;
+}
+.between_left>div:first-child>table>thead{
+    position: relative;
+}
+.between_left>div:first-child>table>tbody {
+    position: absolute;
+    height:120px ;
+    overflow-y: scroll;
+}
+.between_left>div:last-child>table>thead{
+    height: 30px;
+}
+.between_left>div:last-child>table>tbody{
+    height: 70px;
+}
+.bt{
+    width: 100px;
+    height: 30px;
+    margin: 5px 0;
+    background-color: whitesmoke;
+    border:2px solid green;
+    font-weight: bolder;
+}
+.bt:hover{
+    background-color: green;
+    color: aliceblue;
+}
+.right{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    background-color: burlywood;
+    border:4px solid green ;
+    border-radius: 5px;
+}
+.right input{
+    margin:15px 0 ;
+    height:25px;
+    border: none;
+    border-radius: 5px;
+}
+
+.makh{
+    font-size: larger;
+    padding:10px 0px ;
+    font-weight: bold;
+}
+.alert {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/*order-list---------------------------------------------------------------*/
+.admin-content-main-content-order-list table{
+    width:100% ;
+    margin:20px 0 ;
+    border-collapse:collapse ;
+    font-size:0.9rem ;
+}
+.admin-content-main-content-order-list table,th,td{
+    text-align: center;
+}
+.admin-content-main-content-order-list td:nth-child(5){
+    width: 250px;
+    height:50px ;
+}
+.admin-content-main-content-order-list table th{
+    background-color: #424543;
+    color: var(--text-color);
+    padding:5px 0 ;
+}
+.admin-content-main-content-order-list td{
+    padding:5px 0 ;
+}
+/*order detail-------------------------------------------------------------*/
+.admin-content-main-content-order-detail table{
+    width:100% ;
+    margin:20px 0 ;
+    border-collapse:collapse ;
+}
+.admin-content-main-content-order-detail table,th,td{
+    text-align: center;
+}
+.admin-content-main-content-order-detail table th{
+    background-color: #424543;
+    color: var(--text-color);
+    padding:5px 0 ;
+}
+.admin-content-main-content-order-detail td{
+    padding:5px 0 ;
+}
+.admin-content-main-content-order-detail table tbody tr:last-child{
+    border-top:1px solid var(--second-color) ;
+}
+.admin-content-main-content-order-detail table tbody tr td:first-child{
+    font-weight: bolder;
+}
