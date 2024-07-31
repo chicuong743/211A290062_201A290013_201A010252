@@ -1,0 +1,43 @@
+SRS 
+
+1. Giới thiệu
+
+1.1. Mục đích
+các yêu cầu chức năng và phi chức năng của ứng dụng quản lý doanh thu cho cửa hàng, nhằm cung cấp một công cụ hỗ trợ tối đa cho chủ cửa hàng trong việc quản lý doanh thu và hoạt động kinh doanh.
+1.2. Phạm vi
+* Ứng dụng tập trung vào việc quản lý sản phẩm, đơn hàng và tính toán doanh thu của cửa hàng.
+* Ứng dụng không bao gồm các tính năng liên quan đến quản lý nhân viên, kho hàng hoặc các chức năng kế toán khác.
+1.3. Định nghĩa
+* Chủ cửa hàng: Người dùng có quyền truy cập và quản lý toàn bộ hệ thống.
+* Sản phẩm: Mặt hàng được bán tại cửa hàng.
+* Đơn hàng: Phiếu bán hàng ghi nhận thông tin về sản phẩm, số lượng, giá cả và khách hàng.
+* Doanh thu: Tổng số tiền thu được từ việc bán hàng.
+
+2. Mô tả tổng quan
+
+Ứng dụng quản lý doanh thu là một ứng dụng web, cho phép chủ cửa hàng thực hiện các thao tác quản lý sản phẩm, đơn hàng và xem báo cáo doanh thu một cách trực quan và hiệu quả. Ứng dụng được thiết kế với giao diện thân thiện, dễ sử dụng và tương thích với mọi thiết bị.
+
+3. Yêu cầu cụ thể
+
+3.1. Yêu cầu chức năng
+* Quản lý sản phẩm:
+* Thêm, sửa, xóa, tìm kiếm và xem danh sách sản phẩm.
+* Quản lý đơn hàng:
+* Thêm, sửa, xóa, xuất hóa đơn và xem danh sách đơn hàng.
+* Tính toán doanh thu:
+* Xem báo cáo doanh thu tổng thể của cửa hàng.
+* Đăng nhập:
+* Chủ cửa hàng đăng nhập vào hệ thống bằng tài khoản Admin.
+
+3.2. Yêu cầu phi chức năng
+* Tính dễ dùng:
+* Ứng dụng web tương thích với mọi thiết bị.
+* Giao diện trực quan, dễ sử dụng.
+* Tính ổn định:
+* Hệ thống hoạt động 24/7.
+* Dữ liệu được bảo mật và sao lưu thường xuyên.
+* Hiệu suất:
+* Hỗ trợ quản lý không giới hạn sản phẩm, hóa đơn.
+* Tốc độ xử lý các thao tác nhanh.
+* Sự hỗ trợ:
+* Không có hỗ trợ người dùng trực tiếp.
